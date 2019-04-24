@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'quick_end_jerkregular';
+    src: url('fonts/quick_end_jerk-webfont.eot');
+    src: url('fonts/quick_end_jerk-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/quick_end_jerk-webfont.woff2') format('woff2'),
+         url('fonts/quick_end_jerk-webfont.woff') format('woff'),
+         url('fonts/quick_end_jerk-webfont.ttf') format('truetype'),
+         url('fonts/quick_end_jerk-webfont.svg#quick_end_jerkregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bearpawregular';
+    src: url('fonts/BEARPAW_-webfont.eot');
+    src: url('fonts/BEARPAW_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BEARPAW_-webfont.woff2') format('woff2'),
+         url('fonts/BEARPAW_-webfont.woff') format('woff'),
+         url('fonts/BEARPAW_-webfont.ttf') format('truetype'),
+         url('fonts/BEARPAW_-webfont.svg#bearpawregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  font-family: 'quick_end_jerkregular';
+  color: #760000;
+  letter-spacing: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.begin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 150;
+  cursor: pointer;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  opacity: 0;
+  height: 100vh;
+  width: 100%;
+  background: url(img/Background2.png) repeat center center fixed;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  transition: 5s;
+  z-index: 50;
+}
+
+.spinner {
+  opacity: .8;
+  position: absolute;
+  transform-origin: center center;
+  -webkit-animation: spin 100s infinite linear; /* Safari 4.0 - 8.0 */
+  animation: spin 100s infinite linear;
+  z-index: 100;
+}
+
+@keyframes spin {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(359deg)}
+}
+
+.bunny {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 110;
+}
+
+.bunnyWhite {
+  transition: 7s;
+}
+
+.bunnyGrey {
+  transition: 2.5s;
+}
+
+.bunnyRed {
+  transition: 2.5s;
+}
+
+.hide {
+  display: none;
+}
+
+.hiddenText {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.hiddenTitle{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: 2.5s;
+  z-index: 150;
+}
+
+#one {
+  top: 50px;
+  left: 20px;
+}
+
+#two {
+  top: 100px;
+  left: 150px;
+}
+
+#three {
+  bottom: 100px;
+  left: 20px;
+}
+
+#four {
+  bottom: 50px;
+  left: 200px;
+}
+
+#five {
+  top: 200px;
+  left: 20px;
+}
+
+#six {
+  bottom: 50px;
+  right: 20px;
+}
+
+#seven {
+  bottom: 100px;
+  right: 150px;
+}
+
+#eight {
+  top: 100px;
+  right: 20px;
+}
+
+#nine {
+  top: 50px;
+  right: 200px;
+}
+
+#ten {
+  bottom: 200px;
+  right: 20px;
+}
+
+.whiteOverlay {
+  position: absolute;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100%;
+  z-index: 200;
+}
+
+.whiteOverlay > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bunnyFormWrap {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 30%;
+  text-align: right;
+}
+
+.bunnyForm {
+  margin-right: 15%;
+  transition: 2s;
+  width: 100%;
+}
+
+
+input {
+  border: 1px solid black;
+  margin-top: 1%;
+  padding: 1.5% 5%;
+  width: 150px;
+}
+
+.blackOverlay {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  z-index: 2000;
+}
